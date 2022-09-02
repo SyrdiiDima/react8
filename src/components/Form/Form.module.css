@@ -1,0 +1,63 @@
+/* label {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+input {
+  margin-left: 5px;
+}
+
+.btn_close {
+  width: 100px;
+  height: 25px;
+}
+
+.btn_close:hover {
+  background-color: beige;
+}
+
+.form_input {
+  height: 25px;
+}
+ */
+
+.form {
+  margin-bottom: 50px;
+
+}
+
+.label {
+  display: block;
+  margin-top: 20px;
+}
+
+.input {
+
+  display: block;
+  padding: 15px;
+  width: 50%;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+}
+
+.addContact {
+
+  margin-top: 10px;
+  font-size: 15px;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  width: 25%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #e5ee2e;
+  margin-left: 150px;
+}
+
+.addContact:hover {
+  background-color: #1976d2;
+  color: white;
+} 

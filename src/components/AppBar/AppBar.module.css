@@ -1,0 +1,39 @@
+.appBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  padding: 20px;
+  border-bottom: 0.5px solid rgb(104, 104, 104);
+}
+.userGroupe {
+  display: flex;
+  align-items: center;
+}
+.logOutButton {
+  padding: 10px;
+  font-size: inherit;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 25px;
+  border: none;
+  outline: 0.5px solid rgb(104, 104, 104);
+}
+
+.authButton {
+  padding: 10px;
+  font-size: inherit;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 25px;
+  border: none;
+  color: black;
+  outline: 0.5px solid rgb(104, 104, 104);
+}
+.buttonGroupe {
+  display: flex;
+}
+.logOutButton:hover,
+.authButton:hover {
+  background-color: rgb(131, 131, 131);
+}

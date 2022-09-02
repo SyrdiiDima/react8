@@ -1,7 +1,7 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 import { useDeleteContactsMutation } from 'redux/contactsApi';
-import style from './Contact.module.css';
+import css from './Contact.module.css';
 import PropTypes from 'prop-types';
 
 const Contact = ({ id, name, number }) => {
@@ -11,11 +11,11 @@ const Contact = ({ id, name, number }) => {
     toast.success(`Contact ${name} has been DELETE`);
   };
   return (
-    <li className={style.item}>
+    <li className={css.item}>
       <p>
-        <span>{name}</span>: <span className={style.number}>{number}</span>
+        <span>{name}</span>: <span className={css.number}>{number}</span>
       </p>
-      <button type="button" className={style.button} onClick={handleClick}>
+      <button type="button" className={css.button} onClick={handleClick}>
         Delete
       </button>
     </li>

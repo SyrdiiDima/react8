@@ -1,5 +1,5 @@
 import React from 'react';
-import Contact from 'components/Contact/Contact';
+import ContactItem from 'components/Contact/ContactItem';
 
 import { useGetContactByNameQuery } from 'redux/contactsApi';
 import { useSelector } from 'react-redux';
@@ -26,7 +26,9 @@ const ContactList = () => {
         <ul>
           {contacts ? (
             filteredContacts().map(({ id, name, number }) => {
-              return <Contact key={id} id={id} name={name} number={number} />;
+              return (
+                <ContactItem key={id} id={id} name={name} number={number} />
+              );
             })
           ) : (
             <p>You don`t have any contacts</p>

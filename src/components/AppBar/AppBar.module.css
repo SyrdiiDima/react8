@@ -1,39 +1,55 @@
 .appBar {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 16px;
+
   padding: 20px;
-  border-bottom: 0.5px solid rgb(104, 104, 104);
+  justify-content: space-between;
+  font-size: 18px;
+
 }
-.userGroupe {
-  display: flex;
-  align-items: center;
-}
-.logOutButton {
-  padding: 10px;
-  font-size: inherit;
-  margin-left: 10px;
-  cursor: pointer;
-  border-radius: 25px;
-  border: none;
-  outline: 0.5px solid rgb(104, 104, 104);
+.title{
+    color: #1976d2;
 }
 
-.authButton {
-  padding: 10px;
-  font-size: inherit;
-  margin-left: 10px;
-  cursor: pointer;
-  border-radius: 25px;
-  border: none;
-  color: black;
-  outline: 0.5px solid rgb(104, 104, 104);
-}
-.buttonGroupe {
+.linkBtn {
   display: flex;
 }
-.logOutButton:hover,
-.authButton:hover {
-  background-color: rgb(131, 131, 131);
+.navigationBox {
+  align-items: center;
+  display: flex;
+  
+}
+
+.logoutBtn {
+  padding: 5px 20px;
+font-size: 16px;
+background-color: #0080ff;
+  color: white;
+
+  margin-left: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+
+  outline: 1px solid black;
+}
+
+
+
+.logoutBtn:hover{
+background-color: #1976d2;
+
+  color: white;
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: 500;
+  color: #2a363b;
+  font-size: 18px;
+}
+
+.activeLink {
+  /* composes: link; */
+  color: #1976d2;
 }

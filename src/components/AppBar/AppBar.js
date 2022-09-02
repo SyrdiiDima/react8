@@ -1,43 +1,51 @@
 import React from 'react';
-import style from './AppBar.module.css';
-
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import authSelectors from 'redux/auth/auth-selectors';
 import { useDispatch } from 'react-redux';
 import { authOperations } from 'redux/auth/auth-operations';
+import authSelectors from 'redux/auth/auth-selectors';
+import css from './AppBar.module.css';
 
 export const AppBar = () => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
-  // console.log('app bar', isLoggedIn);
   const name = useSelector(authSelectors.getUsername);
-  // console.log(name);
+
   return (
-    <div className={style.appBar}>
-      <h1>Your Phonebook</h1>
+    <div className={css.appBar}>
+      <h1 className={css.title}>Phonebook</h1>
       {!isLoggedIn ? (
-        <ul className={style.buttonGroupe}>
-          <li key="1">
-            <NavLink to="/register" className={style.authButton}>
-              SignUp
+        <ul className={css.linkBtn}>
+          <li>
+            <NavLink
+              to="/register"
+              className={({ isActive }) =>
+                `${css.link}` + (isActive ? ` ${css.activeLink}` : '')
+              }
+            >
+              Register
             </NavLink>
           </li>
-          <li key="2">
-            <NavLink to="/login" className={style.authButton}>
-              SignIn
+          <li>
+            <NavLink
+              to="/login"
+              className={({ isActive }) =>
+                `${css.link}` + (isActive ? ` ${css.activeLink}` : '')
+              }
+            >
+              Login
             </NavLink>
           </li>
         </ul>
       ) : (
-        <div className={style.userGroupe}>
-          <p>Hello {name}</p>
+        <div className={css.navigationBox}>
+          <span>Welcome,{name}</span>
           <button
             type="button"
-            className={style.logOutButton}
-            onClick={() => dispatch(authOperations.logout())}
+            onClick={() => dispatch(authOperations.logOut())}
+            className={css.logoutBtn}
           >
-            LogOut
+            Exit
           </button>
         </div>
       )}

@@ -35,7 +35,7 @@ export const Form = () => {
     }
 
     addContact(contact);
-    toast.success(`Contact ${name} has been added`);
+    toast.success(` ${name} has been added to phonebook`);
     reset();
   };
   const reset = () => {
